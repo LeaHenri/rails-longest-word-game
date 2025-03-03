@@ -1,0 +1,15 @@
+<h1>Results</h1>
+
+<% if @included %>
+    <% if @proper_word %>
+      <%= "Congratulations! #{@word} is a valid Englis word!"%>
+    <% else %>
+      <%= "Sorry but #{@word} is not an English word ..."%>
+    <% end %>
+<% else %>
+  <%= "Sorry but #{@word} cannot be build out of #{@letters}"%>
+<% end %>
+
+<div>
+<%= link_to "Try again", new_path %>
+</div>
